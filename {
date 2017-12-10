@@ -1,0 +1,34 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "application-autoscaling:*",
+        "autoscaling:*",
+        "cloudfront:*",
+        "cloudwatch:*",
+        "datapipeline:*",
+        "dax:*",
+        "dynamodb:*",
+        "ecs:*",
+        "elasticloadbalancing:*",
+        "events:*",
+        "glacier:*",
+        "iam:ListAttachedRolePolicies",
+        "iam:ListInstanceProfiles",
+        "iam:ListRoles",
+        "lambda:*",
+        "logs:*",
+        "rds:*",
+        "route53:*",
+        "route53domains:*",
+        "s3:*",
+        "sns:*",
+        "sqs:*",
+        "xray:*"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:iam::552172703831:user/nua_circleci"
+    }
+  ]
+}

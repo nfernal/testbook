@@ -25,5 +25,5 @@ jobs:
           command: chef exec bundle exec kitchen test
       - run:
           name: Dummy job
-          command: echo "Did it work?"
+          command: echo "Trying again"
 
