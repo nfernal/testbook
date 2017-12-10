@@ -22,4 +22,4 @@ jobs:
       - run:
           name: Kitchen List
           working_directory: ~/chef-repo/cookbooks/project
-          command: chef exec bundle exec kitchen list
+          command: chef exec bundle exec kitchen test

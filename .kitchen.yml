@@ -50,7 +50,5 @@ suites:
   - name: default
     run_list:
       - recipe[testbook::default]
-    verifier:
-      inspec_tests:
-        - test/smoke/default
     attributes:
+
