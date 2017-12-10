@@ -6,8 +6,8 @@ jobs:
         environment:
           AWS_DEFAULT_OUTPUT: json
           AWS_DEFAULT_REGION: us-west-2
-          AWS_SSH_KEY_ID: circle_rsa
-          AWS_SSH_KEY: /root/.ssh/circle_rsa
+          AWS_SSH_KEY_ID: circle-rsa
+          AWS_SSH_KEY: ~/.ssh/circle-rsa
           CIRCLE_WORKING_DIRECTORY: ~/chef-repo/cookbooks
     steps:
       - checkout
@@ -17,7 +17,7 @@ jobs:
           command: knife download data_bags
       - run:
           name: Moving the project directory
-          working_directory: /root
+          working_directory: ~
           command: mv project ~/chef-repo/cookbooks
       - run:
           name: Kitchen List
