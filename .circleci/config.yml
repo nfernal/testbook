@@ -17,7 +17,7 @@ jobs:
           command: knife download data_bags
       - run:
           name: Moving the project directory
-          working_directory: /root/.ssh
+          working_directory: /root
           command: mv project ~/chef-repo/cookbooks
       - run:
           name: Kitchen List
