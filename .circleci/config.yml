@@ -16,8 +16,10 @@ jobs:
           working_directory: ~/chef-repo
           command: knife download data_bags
       - run:
-          name: Integration Tests
+          name: Moving the project directory
+          working_directory: /root/.ssh
+          command: mv project ~/chef-repo/cookbooks
+      - run:
+          name: Kitchen List
           working_directory: ~/chef-repo/cookbooks
-          command: ls -la
-
-
+          command: chef exec bundle exec kitchen list
