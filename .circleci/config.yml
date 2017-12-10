@@ -8,6 +8,7 @@ jobs:
           AWS_DEFAULT_REGION: us-west-2
           AWS_SSH_KEY_ID: circle_rsa
           AWS_SSH_KEY: /root/.ssh/circle_rsa
+          CIRCLE_WORKING_DIRECTORY: ~/chef-repo/cookbooks
     steps:
       - checkout
       - run:
@@ -16,6 +17,7 @@ jobs:
           command: knife download data_bags
       - run:
           name: Integration Tests
-          command: env
+          working_directory: ~/chef-repo/cookbooks
+          command: ls -la
 
 
