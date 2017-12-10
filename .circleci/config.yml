@@ -6,8 +6,15 @@ jobs:
         environment:
           AWS_DEFAULT_OUTPUT: json
           AWS_DEFAULT_REGION: us-west-2
+          AWS_SSH_KEY_ID: circle_rsa
+          AWS_SSH_KEY: /root/.ssh/circle_rsa
     steps:
       - checkout
       - run:
+          name: Download Data Bags
+          command: cd ~/chef-repo && knife download data_bags
+      - run:
           name: Integration Tests
           command: chef exec bundle exec kitchen test
+
+
